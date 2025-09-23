@@ -9,8 +9,8 @@
 using namespace std;
 
 int main() {
-  float a1, b1, c1, a2, b2, c2, h;
-  float p1, p2, s1, s2, ksi;
+  double a1, b1, c1, a2, b2, c2, h;
+  double p1, p2, s1, s2, ksi;
     
   cout << "a1 = ";
   cin  >> a1;
@@ -33,12 +33,10 @@ int main() {
   cout << "h  = ";
   cin  >> h;
   
-  p1=(a1 + b1 + c1)/2;
-  p2=(a2 + b2 + c2)/2;
-  
+  p1 = (a1 + b1 + c1) / 2;
+  p2 = (a2 + b2 + c2) / 2;
   s1 = pow(p1 * (p1 - a1) * (p1 - b1) * (p1 - c1), 0.5);
-  s2 = pow(p2 * (p2 - a2) * (p2 - b2) * (p2 - c2), 0.5);
-  
+  s2 = pow(p2 * (p2 - a2) * (p2 - b2) * (p2 - c2), 0.5); 
   ksi = h / 4 * (s1 + 2 * pow(s1 * s2, 0.5) + 3 * s2) / (s1 + pow(s1 * s2, 0.5) + s2);
   
   cout << "ksi = " << ksi / 100;
